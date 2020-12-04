@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 22px;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 1em auto;
+  align-items: center;
+  flex-direction: column;
+  max-width: 625px;
+}
+
+.images-box {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.images-box img {
+  border-radius: 15px;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 2em 3em;
+}
+
+.arrow-icons {
+  margin-top: .5em;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
