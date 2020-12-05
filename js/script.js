@@ -10,6 +10,8 @@ for (let i = 0; i < btnArr.length; i++) {
 
     keyPresses(buttonInnerHTML);
 
+    buttonAnimation(buttonInnerHTML);
+
   })
 
 }
@@ -17,8 +19,9 @@ for (let i = 0; i < btnArr.length; i++) {
 //Detect keys on press
 document.addEventListener("keydown", function(e) {
   //passes the returned keypress event into the keyPresses function
-  console.log(e);
   keyPresses(e.key);
+
+  buttonAnimation(e.key);
 })
 
 function keyPresses(key) {
@@ -74,4 +77,15 @@ function keyPresses(key) {
       break;                   
   }
 
+}
+
+function buttonAnimation(currentKey) {
+
+  let activeButton = document.querySelector('.' + currentKey);
+
+  activeButton.classList.add('pressed');
+
+  setTimeout(function() {
+    activeButton.classList.remove('pressed')
+  }, 75);
 }
